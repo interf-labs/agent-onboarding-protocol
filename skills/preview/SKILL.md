@@ -1,5 +1,5 @@
 ---
-name: preview
+name: interf-preview
 description: >
   Preview enterprise rollout for an interf.yaml onboarding contract. Simulates
   resolution timelines, identifies stakeholders, and surfaces risks against

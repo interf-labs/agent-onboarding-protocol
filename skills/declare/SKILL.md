@@ -1,5 +1,5 @@
 ---
-name: declare
+name: interf-declare
 description: >
   Declare an interf.yaml onboarding contract. Scans the codebase
   to extract enterprise dependencies, or helps you write them manually. Use when
