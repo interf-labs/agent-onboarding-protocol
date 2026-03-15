@@ -1,13 +1,27 @@
 # Agent Onboarding Protocol
 
-This repository contains the Agent Onboarding Protocol specification and skills for coding agents.
+This repository contains the Agent Onboarding Protocol — an open standard for declaring what vendors need from enterprise environments before rollout.
 
 ## Skills
 
-- **declare** — Scan a codebase and declare an `interf.yaml` onboarding contract
-- **preview** — Preview enterprise rollout against company profiles
-- **protocol** — The protocol spec, schema, and canonical dependency types
+Install all skills:
 
-## Usage
+```bash
+npx skills add interf-labs/agent-onboarding-protocol
+```
 
-Load the `declare` skill to create an onboarding contract for this project, or load `preview` to simulate rollout at an enterprise.
+| Skill | Purpose |
+|---|---|
+| `declare` | Declare an `interf.yaml` onboarding contract |
+| `preview` | Preview enterprise rollout against a company profile |
+| `protocol` | Protocol specification and canonical dependency types |
+
+## Structure
+
+- `skills/declare/SKILL.md` — Load this to declare an onboarding contract
+- `skills/preview/SKILL.md` — Load this to preview a rollout
+- `skills/protocol/` — Spec, examples, and canonical dependency types (loaded automatically by declare and preview)
+
+## Contributing
+
+To expand canonical dependency types, add entries to `skills/protocol/types/<category>/` and submit a PR.
