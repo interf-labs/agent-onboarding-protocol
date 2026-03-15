@@ -1,17 +1,23 @@
-# data.mapping — Field Mapping & Schema
+---
+id: data.field-mapping
+name: Field Mapping
+category: data
+systems: []
+requires: [stakeholder.data-team]
+blocked_by: []
+related: [integration.crm.api, integration.erp.api]
+sectors: [all]
+---
 
-## data.field-mapping
+# Field Mapping
 
-**Matches:** "map your custom fields", "field mapping session", "schema alignment", "your data model to ours", "translate your fields", "custom field configuration"
+Vendor needs enterprise data team to map custom fields, objects, or schemas to vendor's expected format. Common when enterprise has heavily customized their CRM, ERP, or data warehouse.
 
-Vendor needs a human from the enterprise data team to map the enterprise's custom fields, labels, or data model to the vendor's expected schema. Almost always a human coordination task — typically 2-8 hours of work.
+## Template
 
-**Typical ready criteria:** "Field mapping document completed and signed off by both sides"
+- **what:** Someone from your data team to map your custom fields to our schema (~4 hours)
+- **ready:** Field mapping document completed and signed off by both sides
 
-## data.schema-access
+## Matches
 
-**Matches:** "your database schema", "data dictionary", "entity relationship diagram", "understand your data model", "table structures"
-
-Vendor needs to understand the enterprise's data model — table structures, field definitions, relationships — to build correct integrations. Often a prerequisite for field mapping.
-
-**Typical ready criteria:** "We have received and reviewed the data dictionary or ERD for the relevant systems"
+Use this type when vendor says: "map your fields", "custom object mapping", "schema mapping", "data dictionary", "field translation"

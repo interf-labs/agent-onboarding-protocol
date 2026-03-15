@@ -1,31 +1,25 @@
-# Canonical Dependency Types
+---
+description: Canonical dependency types for the Agent Onboarding Protocol
+---
 
-Quick-scan index. Read this first to identify which category a dependency belongs to, then follow the link to the category overview for specific types.
+# Canonical Types
 
-## Categories
+Quick reference for mapping vendor requirements to canonical types.
 
-| Category | Path | Covers |
+| Category | Description | Types |
 |---|---|---|
-| [integration](./integration/overview.md) | `integration.*` | System access — CRM, ERP, HRIS, email, webhooks, ticketing, analytics |
-| [auth](./auth/overview.md) | `auth.*` | Authentication — SSO, API credentials, service accounts, certificates |
-| [data](./data/overview.md) | `data.*` | Data — exports, field mapping, samples, PII, real-time feeds |
-| [infrastructure](./infrastructure/overview.md) | `infra.*` | Environments — staging/test, network, firewall, compute, DNS |
-| [stakeholder](./stakeholder/overview.md) | `stakeholder.*` | People — data team, security, IT, executive sponsor, business owner |
-| [process](./process/overview.md) | `process.*` | Approvals — security review, legal, procurement, change management, training |
+| [integration](./integration/overview.md) | CRM, ERP, HRIS, webhooks, email, ticketing | 11 types |
+| [auth](./auth/overview.md) | SSO, API credentials, service accounts | 4 types |
+| [data](./data/overview.md) | Field mapping, sample data, historical exports | 3 types |
+| [infrastructure](./infrastructure/overview.md) | Test environments, network access | 2 types |
+| [stakeholder](./stakeholder/overview.md) | Data team, security, IT, business owner, sponsor | 5 types |
+| [process](./process/overview.md) | Security review, compliance, training, procurement | 6 types |
 
-## Quick Match
+**Total: 31 canonical types across 6 categories.**
 
-| Vendor says... | Category | Canonical |
-|---|---|---|
-| "access to your CRM" | integration | `integration.crm.api` |
-| "SSO for our app" | auth | `auth.sso.saml` |
-| "12 months of history" | data | `data.historical-export` |
-| "map your custom fields" | data | `data.field-mapping` |
-| "test environment" | infrastructure | `infra.test-environment` |
-| "someone from data team" | stakeholder | `stakeholder.data-team` |
-| "security review" | process | `process.security-review` |
-| "legal review / DPA" | process | `process.legal-review` |
+## How to use
 
-## No Match?
-
-Leave `canonical` empty. The contract works with plain English alone. Unmapped dependencies get reviewed and canonical types are added over time by research agents.
+1. Read the vendor's plain English requirement
+2. Find the matching category above
+3. Navigate to the type file for the `canonical` ID, template, and related types
+4. If no match exists, leave `canonical` empty — the requirement works with plain English alone

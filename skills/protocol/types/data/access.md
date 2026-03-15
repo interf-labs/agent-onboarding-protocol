@@ -1,17 +1,23 @@
-# data.access — Sample Data & PII
+---
+id: data.sample-dataset
+name: Sample Dataset
+category: data
+systems: []
+requires: [stakeholder.data-team]
+blocked_by: []
+related: [infra.test-environment]
+sectors: [all]
+---
 
-## data.sample-dataset
+# Sample Dataset
 
-**Matches:** "sample data", "test data", "representative dataset", "example records for validation", "sandbox data", "synthetic data"
+Vendor needs representative sample data from the enterprise to validate their system against real-world patterns.
 
-Vendor needs a sample or synthetic dataset that represents production data patterns, used for testing and validation before going live.
+## Template
 
-**Typical ready criteria:** "We have processed all sample records and confirmed accuracy above the agreed threshold"
+- **what:** Sample dataset representative of your production data for validation
+- **ready:** We receive a dataset with 1000+ records matching the expected schema
 
-## data.pii-access
+## Matches
 
-**Matches:** "access to customer PII", "personally identifiable information", "real customer data", "production user data", "sensitive data access"
-
-Vendor needs access to data containing PII. Typically the highest-friction dependency — triggers compliance reviews, DPA requirements, and security assessments.
-
-**Typical ready criteria:** "PII access approved, DPA executed, and we can query de-identified or authorized PII records from the designated environment"
+Use this type when vendor says: "sample data", "test data", "representative dataset", "anonymized production data"

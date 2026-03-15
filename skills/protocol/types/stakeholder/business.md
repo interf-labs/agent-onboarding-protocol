@@ -1,25 +1,36 @@
-# stakeholder.business — Business & Executive Coordination
+---
+id: stakeholder.business-owner
+name: Business Process Owner
+category: stakeholder
+systems: []
+requires: []
+blocked_by: []
+related: [process.change-management, process.training]
+sectors: [all]
+---
 
-## stakeholder.executive-sponsor
+# Business Process Owner
 
-**Matches:** "executive sponsor", "senior leadership buy-in", "C-level champion", "internal advocate"
+Vendor needs the person who owns the business process being automated to validate requirements, define edge cases, and approve behavior.
 
-Vendor needs an executive at the enterprise who champions the rollout, unblocks resources, and ensures organizational commitment. Rollouts without executive sponsors stall 3x more often.
+## Template
 
-**Typical ready criteria:** "Executive sponsor identified, briefed, and actively engaged in unblocking resources"
+- **what:** Business process owner to validate requirements and approve workflows
+- **ready:** Business owner has reviewed and approved behavior for all defined use cases
 
-## stakeholder.business-owner
+## Matches
 
-**Matches:** "process owner", "business stakeholder", "someone who owns the workflow", "department head to validate requirements"
+Use this type when vendor says: "business owner", "process owner", "stakeholder approval", "someone who owns this workflow"
 
-Vendor needs the person who owns the business process being automated to validate requirements, define edge cases, and approve the solution's behavior.
+---
 
-**Typical ready criteria:** "Business owner has reviewed and approved the solution's behavior for all defined use cases"
+# Executive Sponsor
 
-## stakeholder.end-users
+`stakeholder.executive-sponsor`
 
-**Matches:** "pilot group", "test users", "beta users", "users to test the workflow", "user acceptance testing"
+Senior leader who champions the initiative and can unblock cross-department coordination.
 
-Vendor needs a group of actual end-users to participate in testing, provide feedback, and validate the solution works in their day-to-day workflow.
+## Template
 
-**Typical ready criteria:** "Pilot group has completed UAT and confirmed the solution meets their workflow requirements"
+- **what:** Executive sponsor to champion the initiative across departments
+- **ready:** Sponsor identified and has communicated priority to relevant teams

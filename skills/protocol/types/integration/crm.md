@@ -1,19 +1,36 @@
-# integration.crm — CRM System Access
+---
+id: integration.crm.api
+name: CRM API Access
+category: integration
+systems: [salesforce, hubspot, dynamics-365, zoho, pipedrive, oracle-cx]
+requires: [auth.api-credentials]
+blocked_by: [process.security-review]
+related: [integration.crm.bulk-export, data.field-mapping, stakeholder.data-team]
+sectors: [all]
+---
 
-## integration.crm.api
+# CRM API Access
 
-**Matches:** "access to your CRM", "read/write contacts", "opportunity data", "customer records from your CRM", "Salesforce/HubSpot/Dynamics access"
+Read/write access to enterprise CRM system via API. One of the most common dependencies — almost any customer-facing automation needs CRM access.
 
-Vendor needs API-level access to the enterprise CRM to read or write customer data. One of the most common dependencies — almost any customer-facing automation needs CRM access.
+## Template
 
-**Common enterprise systems:** Salesforce, HubSpot, Microsoft Dynamics 365, Zoho CRM, Pipedrive, Oracle CX
+- **what:** Read/write access to your CRM (contacts and opportunities)
+- **ready:** We can create a contact and read an opportunity via API from our staging environment
 
-**Typical ready criteria:** "We can create a contact and read an opportunity via API from our staging environment"
+## Matches
 
-## integration.crm.bulk-export
+Use this type when vendor says: "access to your CRM", "read/write contacts", "opportunity data", "customer records", "Salesforce/HubSpot access"
 
-**Matches:** "CRM data export", "bulk extract of contacts", "historical CRM records", "migrate data from your CRM"
+---
 
-Vendor needs a one-time or periodic bulk export of CRM data, typically for training models or backfilling their system. Different from `integration.crm.api` because it's about batch data transfer, not ongoing API access.
+# CRM Bulk Export
 
-**Typical ready criteria:** "We receive a data export of 12+ months of contact and opportunity records in CSV or via bulk API"
+`integration.crm.bulk-export`
+
+One-time or periodic bulk export of CRM data. Different from API access — this is batch data transfer for training models or backfilling.
+
+## Template
+
+- **what:** Bulk export of CRM records (contacts and opportunities, 12+ months)
+- **ready:** We receive a data export of 12+ months of records in CSV or via bulk API

@@ -1,21 +1,36 @@
-# auth.sso — Single Sign-On
+---
+id: auth.sso.saml
+name: SSO via SAML
+category: auth
+systems: [okta, azure-ad, ping-identity, onelogin, google-workspace]
+requires: []
+blocked_by: [process.security-review]
+related: [auth.sso.oidc, auth.api-credentials]
+sectors: [all]
+---
 
-## auth.sso.saml
+# SSO via SAML
 
-**Matches:** "SSO integration", "SAML setup", "users log in via your identity provider", "single sign-on with your Okta/Azure AD/OneLogin"
+Enterprise SSO integration using SAML 2.0 protocol. Vendor's application authenticates users through the enterprise identity provider.
 
-Vendor needs enterprise to configure SAML-based SSO so enterprise users can authenticate into the vendor application using their existing identity provider. One of the most common auth dependencies.
+## Template
 
-**Common enterprise systems:** Okta, Azure AD / Entra ID, OneLogin, Ping Identity, Google Workspace
+- **what:** SSO endpoint for our service to authenticate your users
+- **ready:** A test user can log into our app via your SSO and see their data
 
-**Typical ready criteria:** "A test user can log into our application via your SSO and access their data"
+## Matches
 
-## auth.sso.oidc
+Use this type when vendor says: "SSO integration", "SAML authentication", "single sign-on", "identity provider", "federated login"
 
-**Matches:** "OpenID Connect", "OIDC integration", "OAuth2 login flow", "modern SSO"
+---
 
-Vendor needs OpenID Connect based SSO setup. More modern than SAML, common with cloud-native enterprises and newer identity providers.
+# SSO via OIDC
 
-**Common enterprise systems:** Auth0, Okta, Azure AD / Entra ID, Google Identity Platform
+`auth.sso.oidc`
 
-**Typical ready criteria:** "A test user can complete the OIDC login flow and our service receives valid ID and access tokens"
+Same as SAML but using OpenID Connect protocol. More common with modern/cloud-native enterprises.
+
+## Template
+
+- **what:** OIDC endpoint for our service to authenticate your users
+- **ready:** A test user can complete the OIDC flow and access our application

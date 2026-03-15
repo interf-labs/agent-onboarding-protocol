@@ -1,18 +1,20 @@
-# integration — External System Access
+---
+category: integration
+description: External system integrations — APIs, webhooks, data feeds
+---
 
-Vendor needs to connect to or exchange data with an enterprise system. Match when vendor says "access to your [system]", "connect to your [platform]", "integration with your [tool]".
+# Integration Types
 
-## Types
-
-| Canonical | One-liner | Detail |
+| Type | Name | File |
 |---|---|---|
-| `integration.crm.api` | Read/write access to enterprise CRM | [crm.md](./crm.md) |
-| `integration.crm.bulk-export` | Bulk data export from CRM | [crm.md](./crm.md) |
-| `integration.erp.api` | ERP system access (orders, inventory, financials) | [erp.md](./erp.md) |
-| `integration.hris.api` | HR information system access | [erp.md](./erp.md) |
-| `integration.email.api` | Email platform access (send/read) | [messaging.md](./messaging.md) |
-| `integration.messaging.api` | Chat platform access (Slack, Teams) | [messaging.md](./messaging.md) |
-| `integration.ticketing.api` | Ticketing system access (Jira, ServiceNow) | [ticketing.md](./ticketing.md) |
-| `integration.analytics.api` | Analytics/data warehouse access | [analytics.md](./analytics.md) |
-| `integration.webhook.inbound` | Enterprise exposes endpoint for vendor to call | [webhook.md](./webhook.md) |
-| `integration.webhook.outbound` | Enterprise sends events to vendor endpoint | [webhook.md](./webhook.md) |
+| `integration.crm.api` | CRM API Access | [crm.md](./crm.md) |
+| `integration.crm.bulk-export` | CRM Bulk Export | [crm.md](./crm.md) |
+| `integration.erp.api` | ERP System Access | [erp.md](./erp.md) |
+| `integration.erp.rfc` | SAP RFC | [erp.md](./erp.md) |
+| `integration.hris.api` | HRIS Access | [erp.md](./erp.md) |
+| `integration.webhook.outbound` | Outbound Webhook | [webhook.md](./webhook.md) |
+| `integration.webhook.inbound` | Inbound Webhook | [webhook.md](./webhook.md) |
+| `integration.email.api` | Email System | [messaging.md](./messaging.md) |
+| `integration.messaging.api` | Messaging Platform | [messaging.md](./messaging.md) |
+| `integration.analytics.api` | Analytics Platform | [analytics.md](./analytics.md) |
+| `integration.ticketing.api` | Ticketing System | [ticketing.md](./ticketing.md) |

@@ -1,17 +1,23 @@
-# infra.network — Network Access & DNS
+---
+id: infra.network-access
+name: Network Access
+category: infrastructure
+systems: []
+requires: [stakeholder.it-admin, process.security-review]
+blocked_by: []
+related: [auth.api-credentials]
+sectors: [all]
+---
 
-## infra.network-access
+# Network Access
 
-**Matches:** "firewall rules", "allowlist our IPs", "VPN access", "network connectivity", "open port", "whitelist", "private link"
+Vendor needs network-level access — firewall rules, IP allowlisting, VPN, or private connectivity.
 
-Enterprise needs to configure network access so the vendor's service can reach enterprise systems — firewall rules, IP allowlisting, VPN setup, or private link configuration.
+## Template
 
-**Typical ready criteria:** "Our service can connect to your systems from our production environment without network errors"
+- **what:** Network access from our cloud to your environment (IP allowlisting or VPN)
+- **ready:** Our service can establish a connection to your endpoint from our production IPs
 
-## infra.dns
+## Matches
 
-**Matches:** "custom domain", "DNS records", "CNAME setup", "subdomain configuration"
-
-Enterprise needs to configure DNS records — typically a CNAME or A record pointing a subdomain to the vendor's service.
-
-**Typical ready criteria:** "The configured domain resolves correctly and serves our application"
+Use this type when vendor says: "firewall rules", "IP allowlist", "VPN access", "network connectivity", "private link"

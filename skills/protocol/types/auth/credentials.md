@@ -1,25 +1,36 @@
-# auth.credentials — API Keys, Service Accounts & Certificates
+---
+id: auth.api-credentials
+name: API Credentials
+category: auth
+systems: []
+requires: []
+blocked_by: [process.security-review]
+related: [auth.sso.saml]
+sectors: [all]
+---
 
-## auth.api-credentials
+# API Credentials
 
-**Matches:** "API key for our service", "client ID and secret", "provision credentials", "API access token", "generate an API key"
+API keys, OAuth client credentials, or service account tokens that vendor's service uses to connect to enterprise systems.
 
-Enterprise needs to generate and provision API credentials that the vendor service uses to authenticate. This is the vendor's service connecting to enterprise systems, not users logging in.
+## Template
 
-**Typical ready criteria:** "Our service authenticates and completes a round-trip API call using the provisioned credentials"
+- **what:** API credentials for our service to connect
+- **ready:** Our service authenticates and completes a round-trip API call
 
-## auth.service-account
+## Matches
 
-**Matches:** "service account", "machine-to-machine auth", "automated access", "bot account with permissions", "system user"
+Use this type when vendor says: "API key", "OAuth credentials", "service account", "client ID and secret", "bearer token"
 
-Enterprise needs to create a service account with specific permissions for the vendor's automated processes. Common for background jobs, data pipelines, and scheduled operations.
+---
 
-**Typical ready criteria:** "Our service can authenticate as the service account and perform all required operations"
+# Service Account
 
-## auth.certificate
+`auth.service-account`
 
-**Matches:** "mTLS", "client certificate", "certificate-based auth", "PKI setup", "mutual TLS"
+Dedicated service identity (not tied to a human user) for vendor's automated processes.
 
-Enterprise needs to provision or exchange certificates for mutual TLS or certificate-based authentication. Common in highly regulated industries (banking, healthcare, government).
+## Template
 
-**Typical ready criteria:** "Mutual TLS handshake succeeds between our service and your endpoint using the provisioned certificates"
+- **what:** Service account with appropriate permissions for our automated workflows
+- **ready:** Our service can authenticate as the service account and perform all required operations

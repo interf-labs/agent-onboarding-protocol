@@ -1,17 +1,23 @@
-# infra.environments — Test Environments & Compute
+---
+id: infra.test-environment
+name: Test Environment
+category: infrastructure
+systems: []
+requires: [stakeholder.it-admin]
+blocked_by: []
+related: [data.sample-dataset]
+sectors: [all]
+---
 
-## infra.test-environment
+# Test Environment
 
-**Matches:** "staging environment", "sandbox", "test environment with real data", "QA environment", "dev instance for integration testing"
+Vendor needs a non-production environment with representative configuration to validate their integration.
 
-Vendor needs a non-production environment that resembles production closely enough for meaningful testing. Should have representative data and configurations.
+## Template
 
-**Typical ready criteria:** "We can run our full test suite against the environment without errors"
+- **what:** Test environment with sample data for validation
+- **ready:** We can run our full test suite against the environment without errors
 
-## infra.compute
+## Matches
 
-**Matches:** "server resources", "compute for our workload", "deploy in your environment", "on-premises hosting", "GPU resources", "VM provisioning"
-
-Enterprise needs to provision compute resources for the vendor's workload, typically for on-premises or private cloud deployments.
-
-**Typical ready criteria:** "Compute resources provisioned and our service is running and responsive on the target infrastructure"
+Use this type when vendor says: "staging environment", "sandbox", "test environment", "QA environment", "non-prod"

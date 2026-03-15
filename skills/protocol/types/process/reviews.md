@@ -1,33 +1,49 @@
-# process.reviews — Security, Legal, Compliance & Architecture Reviews
+---
+id: process.security-review
+name: Security Review
+category: process
+systems: []
+requires: [stakeholder.security-team]
+blocked_by: []
+related: [process.compliance-review, process.architecture-review]
+sectors: [all]
+---
 
-## process.security-review
+# Security Review
 
-**Matches:** "security assessment", "vendor security review", "SIG questionnaire", "SOC2 validation", "infosec review process", "pen test"
+Enterprise's formal security assessment of the vendor. Typically includes security questionnaire, architecture review, and may require SOC2/ISO27001 evidence. One of the longest lead-time dependencies at Fortune 500 companies.
 
-Enterprise's formal security assessment of the vendor solution. Typically includes a security questionnaire, architecture review, and may require evidence of SOC2/ISO27001 compliance. One of the longest lead-time dependencies at Fortune 500 companies.
+## Template
 
-**Typical ready criteria:** "Security review completed, approval granted, and any remediation items resolved"
+- **what:** Security review and approval for our integration
+- **ready:** Security review completed and vendor approved for production integration
 
-## process.legal-review
+## Matches
 
-**Matches:** "legal review", "DPA", "data processing agreement", "contract review", "legal terms", "MSA negotiation"
+Use this type when vendor says: "security review", "security assessment", "vendor risk assessment", "security questionnaire", "SIG/CAIQ"
 
-Enterprise legal team reviews and negotiates agreements — DPA, MSA, SLA terms. At large enterprises, legal review can take weeks due to backlog and multiple rounds of redlines.
+---
 
-**Typical ready criteria:** "All agreements (MSA, DPA, SLA) fully executed by both parties"
+# Compliance Review
 
-## process.compliance-review
+`process.compliance-review`
 
-**Matches:** "compliance review", "regulatory check", "HIPAA assessment", "GDPR review", "audit preparation", "PCI-DSS assessment"
+Enterprise compliance team assesses whether the vendor meets regulatory requirements — HIPAA, GDPR, PCI-DSS, SOX.
 
-Enterprise compliance team assesses whether the vendor solution meets regulatory requirements specific to their industry — HIPAA, GDPR, PCI-DSS, SOX, etc.
+## Template
 
-**Typical ready criteria:** "Compliance review completed and solution approved for the applicable regulatory frameworks"
+- **what:** Compliance review for applicable regulatory frameworks
+- **ready:** Compliance review completed and approved
 
-## process.architecture-review
+---
 
-**Matches:** "architecture review board", "ARB approval", "technical design review", "enterprise architecture sign-off"
+# Architecture Review
 
-Enterprise architecture review board evaluates the vendor solution's technical design, integration patterns, and alignment with enterprise standards. Common at Fortune 500 companies.
+`process.architecture-review`
 
-**Typical ready criteria:** "Architecture review board has approved the integration design"
+Enterprise architecture review board evaluates technical design and alignment with enterprise standards.
+
+## Template
+
+- **what:** Architecture review of our integration design
+- **ready:** Architecture review board has approved the integration pattern

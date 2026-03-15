@@ -1,17 +1,23 @@
-# data.exports — Data Exports & Feeds
+---
+id: data.historical-export
+name: Historical Data Export
+category: data
+systems: []
+requires: [stakeholder.data-team, process.compliance-review]
+blocked_by: []
+related: [integration.crm.bulk-export]
+sectors: [all]
+---
 
-## data.historical-export
+# Historical Data Export
 
-**Matches:** "12 months of history", "historical records", "data export for training", "backfill from your system", "past transaction data", "export your data"
+Vendor needs historical data (typically 6-24 months) for training models, establishing baselines, or backfilling their system.
 
-Vendor needs a bulk export of historical data, typically for training models, establishing baselines, or backfilling their system. Always clarify the timeframe and format.
+## Template
 
-**Typical ready criteria:** "We receive a data export of 12+ months of records in the agreed format"
+- **what:** 12 months of historical transaction data for training automation rules
+- **ready:** We receive a data export or API access returning 12+ months of records
 
-## data.real-time-feed
+## Matches
 
-**Matches:** "real-time data", "streaming updates", "change data capture", "CDC", "live feed of changes", "event stream"
-
-Vendor needs a continuous real-time feed of data changes from the enterprise system, not just a one-time export. More complex to set up than a bulk export.
-
-**Typical ready criteria:** "We receive change events within 5 seconds of a record modification in your system"
+Use this type when vendor says: "historical data", "training data", "data export", "backfill", "past records"

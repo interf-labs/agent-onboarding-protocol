@@ -1,17 +1,36 @@
-# process.change — Change Management & Training
+---
+id: process.change-management
+name: Change Management
+category: process
+systems: []
+requires: [stakeholder.business-owner]
+blocked_by: []
+related: [process.training, stakeholder.executive-sponsor]
+sectors: [all]
+---
 
-## process.change-management
+# Change Management
 
-**Matches:** "change management", "internal communication", "stakeholder alignment", "workflow transition", "process change", "affected teams"
+Enterprise needs to manage the internal change that the vendor's rollout introduces — communicating to affected teams, updating workflows, adjusting processes.
 
-Enterprise needs to manage the internal change that the vendor's solution introduces — communicating to affected teams, updating workflows, adjusting processes. Critical for solutions that change how people work.
+## Template
 
-**Typical ready criteria:** "Change management plan executed, affected teams briefed, and updated workflows documented"
+- **what:** Change management plan for affected teams
+- **ready:** All affected teams have been briefed and acknowledge the upcoming changes
 
-## process.training
+## Matches
 
-**Matches:** "user training", "training program", "onboarding users", "teach your team to use", "adoption program", "training sessions"
+Use this type when vendor says: "change management", "team communication", "workflow changes", "process updates"
 
-Enterprise needs to train end-users on the vendor's solution. Can range from a 30-minute walkthrough to a multi-week adoption program depending on complexity.
+---
 
-**Typical ready criteria:** "All designated end-users have completed training and can independently use the solution"
+# Training
+
+`process.training`
+
+Enterprise needs to train end-users on the new system or workflow.
+
+## Template
+
+- **what:** Training program for end-users (~2 hour session)
+- **ready:** All designated end-users have completed training and can independently use the system

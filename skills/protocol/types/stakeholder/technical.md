@@ -1,25 +1,49 @@
-# stakeholder.technical — Technical Team Coordination
+---
+id: stakeholder.data-team
+name: Data Team
+category: stakeholder
+systems: []
+requires: []
+blocked_by: []
+related: [data.field-mapping, data.sample-dataset]
+sectors: [all]
+---
 
-## stakeholder.data-team
+# Data Team
 
-**Matches:** "someone from your data team", "data engineer to help", "analytics team coordination", "data team availability for mapping"
+Vendor needs someone from the enterprise data/analytics team to participate in field mapping, data validation, or schema review.
 
-Vendor needs time and coordination with the enterprise data or analytics team — typically for field mapping, schema alignment, data export setup, or pipeline configuration. Usually 4-20 hours over 1-3 weeks.
+## Template
 
-**Typical ready criteria:** "Data team point of contact assigned and has completed all coordination tasks"
+- **what:** Someone from your data team to map your custom fields to our schema (~4 hours)
+- **ready:** Field mapping document completed and signed off by both sides
 
-## stakeholder.security-review
+## Matches
 
-**Matches:** "security team review", "infosec approval", "security assessment", "CISO sign-off", "penetration test"
+Use this type when vendor says: "data team", "data engineer", "someone who knows your schema", "field mapping resource"
 
-Vendor needs the enterprise security team to review and approve the vendor's solution. Often involves a security questionnaire (SIG, CAIQ), architecture review, and sometimes a penetration test.
+---
 
-**Typical ready criteria:** "Security review completed and approval granted with any conditions documented"
+# Security Team
 
-## stakeholder.it-admin
+`stakeholder.security-team`
 
-**Matches:** "IT admin to configure", "system administrator", "someone to provision", "IT team to set up"
+Vendor needs enterprise security team to review and approve the vendor's integration.
 
-Vendor needs an IT administrator to perform configuration tasks — provisioning accounts, configuring SSO, setting up network rules, installing agents.
+## Template
 
-**Typical ready criteria:** "All IT provisioning tasks completed and verified"
+- **what:** Security team contact for review and approval
+- **ready:** Security review completed and integration approved
+
+---
+
+# IT Admin
+
+`stakeholder.it-admin`
+
+Vendor needs IT admin access for provisioning accounts, configuring firewall rules, or setting up service accounts.
+
+## Template
+
+- **what:** IT admin to provision service accounts and configure network access
+- **ready:** Service accounts created and network rules applied

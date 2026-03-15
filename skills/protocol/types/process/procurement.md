@@ -1,9 +1,23 @@
-# process.procurement — Procurement & Vendor Onboarding
+---
+id: process.procurement
+name: Procurement
+category: process
+systems: []
+requires: [stakeholder.executive-sponsor]
+blocked_by: []
+related: [process.compliance-review]
+sectors: [all]
+---
 
-## process.procurement
+# Procurement
 
-**Matches:** "procurement process", "vendor onboarding", "purchasing", "PO", "budget approval", "vendor registration", "purchasing department"
+Enterprise procurement/legal process for vendor contracts — MSA, DPA, SOW, budget approval.
 
-Enterprise procurement process — budget approval, vendor registration, PO issuance. Often the most underestimated dependency. At Fortune 500 companies, procurement cycles can take 2-6 months.
+## Template
 
-**Typical ready criteria:** "Vendor registered in procurement system, PO issued, and budget allocated"
+- **what:** Procurement and legal approval for vendor agreement
+- **ready:** MSA and DPA signed, SOW approved, PO issued
+
+## Matches
+
+Use this type when vendor says: "procurement", "legal review", "MSA", "DPA", "purchase order", "budget approval", "contract signing"
