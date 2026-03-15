@@ -22,6 +22,16 @@ Read/write access to enterprise CRM system via API. One of the most common depen
 
 Use this type when vendor says: "access to your CRM", "read/write contacts", "opportunity data", "customer records", "Salesforce/HubSpot access"
 
+## System-Specific
+
+- [Salesforce](./crm/systems/salesforce.md) — Connected App, OAuth scopes, IP allowlisting
+- [HubSpot](./crm/systems/hubspot.md) — Private App, rate limits, association API
+
+## Sector Patterns
+
+- [Financial Services](./crm/sectors/financial-services.md) — PII restrictions, extended security review
+- [Healthcare](./crm/sectors/healthcare.md) — HIPAA BAA, PHI handling, de-identification
+
 ---
 
 # CRM Bulk Export
