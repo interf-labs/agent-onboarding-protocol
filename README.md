@@ -49,33 +49,31 @@ description: Automates CRM data entry and follow-up scheduling
 requirements:
   - what: Read/write access to your CRM (contacts and opportunities)
     ready: We can create a contact and read an opportunity via API from our staging environment
+    canonical: integration.crm.api
 
   - what: SSO endpoint for our service to authenticate your users
     ready: A test user can log into our app via your SSO and see their CRM data
+    canonical: auth.sso.saml
 
   - what: Someone from your data team to map your custom fields to our schema (~4 hours)
     ready: Field mapping document completed and signed off by both sides
+    canonical: stakeholder.data-team
 
   - what: Test environment with sample CRM data for validation
     ready: We can run our full test suite against the environment without errors
+    canonical: infra.test-environment
 
 optional:
   - what: Webhook endpoint for real-time update notifications
     ready: We receive a test webhook payload within 5 seconds of a CRM update
+    canonical: integration.webhook.outbound
 ```
 
-Plain English. Any stakeholder can read it. No ambiguity on what "done" looks like.
+Plain English. Any stakeholder can read it. The `canonical` field maps each requirement to a known dependency type — added automatically by the declare skill, never required.
 
-## How It Works
+## Canonical Types
 
-1. **Declare** — Your coding agent scans the codebase and declares every enterprise dependency in `interf.yaml`. Or you write it manually.
-2. **Deliver** — Send the contract to enterprise. Via the Interf platform, email, or however you work today.
-3. **Resolve** — Enterprise works through each requirement. The `ready` criteria tell them exactly when it's done.
-4. **Verify** — All requirements resolved. Rollout can proceed.
-
-## Canonical Dependency Types
-
-Requirements can be anything in plain English. Optional canonical types enable deterministic matching across vendors and enterprises:
+Each `canonical` field maps a requirement to a known dependency type. This enables deterministic matching — if enterprise has already resolved `auth.sso.saml` for one vendor, it auto-resolves for every other vendor that needs it.
 
 | Category | Covers |
 |---|---|
@@ -86,14 +84,22 @@ Requirements can be anything in plain English. Optional canonical types enable d
 | `stakeholder.*` | Data team, security, IT admin, executive sponsor |
 | `process.*` | Security review, legal/DPA, procurement, training |
 
-See [skills/protocol/types/](./skills/protocol/types/) for the full reference.
+See [skills/protocol/types/](./skills/protocol/types/) for the full reference with match patterns.
 
-## Also Available Via CLI
+## How It Works
+
+1. **Declare** — Your coding agent scans the codebase and declares every enterprise dependency in `interf.yaml`. Or you write it manually.
+2. **Deliver** — Send the contract to enterprise. Via the Interf platform, email, or however you work today.
+3. **Resolve** — Enterprise works through each requirement. The `ready` criteria tell them exactly when it's done.
+4. **Verify** — All requirements resolved. Rollout can proceed.
+
+## CLI
 
 ```bash
 npx interf                # Install skills to your coding agent
-npx interf declare        # Install declare + protocol skills
 npx interf validate       # Validate interf.yaml against the schema
+npx interf publish        # Publish to the Interf registry (coming soon)
+npx interf simulate       # Simulate rollout across profiles (coming soon)
 ```
 
 ## Contributing
