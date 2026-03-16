@@ -48,7 +48,7 @@ optional:
     canonical: integration.webhook.outbound
 ```
 
-## Canonical Dependency Types
+## Canonical Dependencies
 
 31 canonical types across 6 categories. Each type has an ID, template, match phrases, and relationships.
 
@@ -61,18 +61,23 @@ optional:
 | `stakeholder.*` | 5 | Data team, security, IT, business owner, sponsor |
 | `process.*` | 6 | Security review, compliance, training, procurement |
 
-See [skills/protocol/canonical-dependencies/](./skills/protocol/canonical-dependencies/) for the full reference.
+Browse the full reference: [canonical-dependencies/](./canonical-dependencies/)
+
+Each type can be expanded with:
+- `systems/` — system-specific patterns (Salesforce, SAP, Okta...)
+- `sectors/` — sector-specific patterns (healthcare, financial services...)
+- `use-cases/` — real rollout scenarios
 
 ## Contributing
 
-The canonical dependency types grow over time. See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add new types, system-specific files, sector patterns, and use-cases.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add new types, system-specific files, sector patterns, and use-cases.
 
 ## Related
 
 | Repo | Purpose |
 |---|---|
 | [cli](https://github.com/interf-labs/cli) | CLI tooling — validate, publish, simulate |
-| [interf.com](https://interf.com) | Documentation and platform |
+| [interf.com](https://interf.com) | Documentation |
 
 ## License
 

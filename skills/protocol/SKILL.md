@@ -25,7 +25,7 @@ See [examples.md](./examples.md) for realistic contracts across different rollou
 
 ## Canonical Dependency Types
 
-See [canonical-dependencies/index.md](./canonical-dependencies/index.md) for the full reference.
+See [../../canonical-dependencies/index.md](./canonical-dependencies/index.md) for the full reference.
 
 **Always load these before declaring or previewing a contract.** Each type has:
 - `id` — the canonical identifier (e.g. `integration.crm.api`)
