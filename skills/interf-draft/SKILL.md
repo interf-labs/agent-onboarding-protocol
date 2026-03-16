@@ -1,7 +1,7 @@
 ---
-name: interf-contract
+name: interf-draft
 description: >
-  Create an interf.yaml onboarding contract by scanning the codebase for
+  Draft an interf.yaml onboarding contract by scanning the codebase for
   enterprise dependencies, or define them manually. Use when you need to
   specify what you need from enterprise before rollout.
 ---

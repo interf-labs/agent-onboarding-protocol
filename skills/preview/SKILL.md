@@ -12,7 +12,7 @@ Generate a rollout preview for a specific enterprise based on an `interf.yaml` o
 
 ## Before You Start
 
-1. **Load the contract.** Read the project's `interf.yaml`. If none exists, run the `interf-contract` skill first.
+1. **Load the contract.** Read the project's `interf.yaml`. If none exists, run the `interf-draft` skill first.
 2. **Load canonical types.** Read [canonical-dependencies/index.md](../protocol/canonical-dependencies/index.md) for dependency relationships, blockers, and sector patterns.
 
 ## Step 1: Build Enterprise Profile
