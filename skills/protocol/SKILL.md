@@ -4,7 +4,7 @@ description: >
   The Agent Onboarding Protocol specification — the open standard
   format for declaring what vendors need from enterprise environments.
   Includes canonical dependency types for deterministic matching.
-  Loaded automatically by interf-declare and interf-preview.
+  Loaded automatically by interf-contract and interf-preview.
 user-invocable: false
 ---
 
