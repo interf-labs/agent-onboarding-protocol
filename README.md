@@ -11,7 +11,7 @@ npx skills add interf-labs/agent-onboarding-protocol
 Then tell your coding agent:
 
 ```
-create an onboarding contract for this project and preview rollout for BlackRock
+draft an onboarding contract for this project and preview rollout for BlackRock
 ```
 
 ## Skills
