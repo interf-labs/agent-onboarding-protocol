@@ -76,7 +76,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add new types, system-specif
 
 | Repo | Purpose |
 |---|---|
-| [cli](https://github.com/interf-labs/cli) | CLI tooling — validate, publish, simulate |
+| [cli](https://github.com/interf-labs/cli) | CLI tooling — validate, publish, preview |
 | [interf.com](https://interf.com) | Documentation |
 
 ## License
