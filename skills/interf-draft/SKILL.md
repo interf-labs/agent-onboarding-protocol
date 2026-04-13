@@ -1,14 +1,11 @@
 ---
 name: interf-draft
-description: >
-  Draft an interf.yaml readiness contract by scanning the codebase for
-  enterprise dependencies, or define them manually. Use when you need to
-  specify what you need from enterprise before rollout.
+description: "Draft an interf.yaml readiness contract by scanning the codebase for enterprise dependencies — API endpoints, auth providers, infrastructure requirements, and stakeholder needs — or define them manually. Use when creating rollout prerequisites, pre-launch checklists, or specifying what a vendor needs from enterprise before deployment."
 ---
 
-# Declare Readiness Contract
+# Draft Readiness Contract
 
-Extract or define an `interf.yaml` readiness contract declaring what you need from enterprise environments.
+Extract or define an `interf.yaml` readiness contract declaring what the project needs from enterprise environments.
 
 ## Before You Start
 
@@ -16,18 +13,14 @@ Extract or define an `interf.yaml` readiness contract declaring what you need fr
 
 ## Step 1: Analyze the Project
 
-- What does this project do and who are the enterprise users?
-- What external systems does it connect to?
-- What data access is needed?
-- What authentication/authorization is required?
-- Who needs to be involved on the enterprise side?
-- What reviews or approvals are typical?
+Scan the codebase for enterprise dependencies:
 
-Look at:
-- Configuration files (environment variables, API endpoints, auth config)
-- Integration code (API clients, database connections, webhook handlers)
-- Documentation (architecture docs, setup guides, runbooks)
-- Deployment config (infrastructure requirements, network rules)
+- **Configuration files** — environment variables, API endpoints, auth config
+- **Integration code** — API clients, database connections, webhook handlers
+- **Deployment config** — infrastructure requirements, network rules, environment setup
+- **Documentation** — architecture docs, setup guides referencing external systems
+
+Identify what external systems, data access, authentication, stakeholders, and approval processes the project depends on.
 
 ## Step 2: Map to Canonical Types
 
@@ -74,7 +67,7 @@ optional:
 5. **Include stakeholder dependencies.** If someone needs to be involved (data team, security team), that's a requirement too.
 6. **Include process dependencies.** Security review, compliance review, training — these are the blockers FDEs hate discovering mid-flight.
 
-## Step 4: Validate (Optional)
+## Step 4: Validate
 
 After writing `interf.yaml`, validate it against the protocol schema and canonical types:
 
@@ -87,4 +80,4 @@ This checks:
 - Canonical type IDs against the latest known types
 - Suggests corrections for shorthand or hallucinated IDs (e.g. `sso` → `auth.sso.saml`)
 
-If the CLI is not installed, suggest the user run `npx interf validate` — it auto-installs and validates in one step.
+If validation fails, fix the flagged issues and re-run until the contract passes. If the CLI is not installed, `npx interf validate` auto-installs and validates in one step.
