@@ -1,9 +1,6 @@
 ---
 name: interf-preview
-description: >
-  Preview enterprise rollout against a company profile. Produces
-  resolution timelines, identifies stakeholders, and surfaces risks.
-  Use when you want to understand what rollout looks like at a specific enterprise.
+description: "Preview enterprise rollout against a company profile — produces resolution timelines, identifies stakeholders, maps dependency chains, and surfaces risks. Use when generating a deployment plan, implementation preview, or go-to-market readiness assessment for a specific enterprise customer."
 ---
 
 # Preview Enterprise Rollout
@@ -14,6 +11,7 @@ Generate a rollout preview for a specific enterprise based on an `interf.yaml` r
 
 1. **Load the contract.** Read the project's `interf.yaml`. If none exists, run the `interf-draft` skill first.
 2. **Load canonical types.** Read [canonical-dependencies/index.md](../protocol/canonical-dependencies/index.md) for dependency relationships, blockers, and sector patterns.
+3. **Verify inputs.** Confirm the contract has at least one requirement with `what` + `ready` fields. If any `canonical` IDs are present, verify they resolve against the canonical-dependencies reference.
 
 ## Step 1: Build Enterprise Profile
 
@@ -22,6 +20,8 @@ Research the target enterprise:
 - **Size** — Fortune 500, mid-market, growth stage
 - **Known systems** — Salesforce, SAP, Okta, etc. (from public info, job postings, tech stack databases)
 - **Regulatory environment** — HIPAA, PCI-DSS, SOX, GDPR, etc.
+
+Verify the profile covers all four dimensions before proceeding — gaps here cascade into inaccurate timelines.
 
 ## Step 2: Analyze Each Requirement
 
@@ -36,6 +36,8 @@ For each requirement in the contract:
    - **Risks** — what could go wrong (from key risks / common gotchas)
    - **Complexity** — from the canonical type's complexity field
 
+Flag any requirements where canonical types could not be resolved or where sector/system data is missing.
+
 ## Step 3: Build Resolution Timeline
 
 1. Order requirements by dependency chain (what blocks what)
@@ -43,17 +45,23 @@ For each requirement in the contract:
 3. Group parallel work streams
 4. Flag high-risk items
 
+Example dependency chain: `auth.sso.saml` → `integration.crm.api` → `data.historical-export` (SSO must be live before CRM API access, which must be live before historical data export can begin).
+
 ## Step 4: Present the Preview
 
 For each requirement:
-- Resolution approach and steps
-- Stakeholders involved
-- Estimated complexity (low / medium / high)
-- Risks and mitigations
-- What it's blocked by
+
+| Field | Description |
+|-------|-------------|
+| **Requirement** | The `what` from the contract |
+| **Approach** | Resolution steps for this enterprise |
+| **Stakeholders** | Who needs to be involved |
+| **Complexity** | Low / Medium / High |
+| **Risks** | What could go wrong and mitigations |
+| **Blocked by** | Other requirements that must resolve first |
 
 Summary:
-- **Critical path** with ordered dependencies
-- **Parallel work streams** that can run concurrently
-- **Top risks** across the rollout
-- **Key stakeholders** and their involvement
+- **Critical path** — ordered dependency chain with the longest sequential resolution time
+- **Parallel work streams** — requirements that can be resolved concurrently
+- **Top risks** — highest-impact risks across the rollout with mitigations
+- **Key stakeholders** — all involved parties and their requirements
